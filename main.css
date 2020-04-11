@@ -1,0 +1,92 @@
+/* ---------- Reset ---------- */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+ box-sizing: border-box;
+  font-family: Roboto;
+  background: #60463b;
+}
+/* ---------- Reset ---------- */
+/* ---------- Container ---------- */
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 5rem;
+  text-align: center;
+  background: #312f2f;
+  display: block;
+  animation: containerAnimation 1s .3s ease-out;
+  animation-fill-mode: backwards;
+}
+.container__quote {
+  font-size: 2rem;
+  display: block;
+  color: #f6e8ea;
+  margin-bottom: 3rem;
+}
+.container__quote--value {
+  color: #ef626c;
+  display: block;
+}
+.container__author {
+  font-size: 1.5rem;
+  color: #f6e8ea;
+}
+.container__author--value {
+  font-size: 1.5rem;
+  color: #f6e8ea;
+}
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  transition: all 0.3s;
+  position: relative;
+  color: #ef626c;
+  margin-bottom: 3rem;
+}
+.btn::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  z-index: -1;
+  background-color: #22181c;
+  transition: all 0.3s;
+  border-bottom: 1px solid #ef626c;
+}
+.btn:hover{
+ color: #f6e8ea;
+}
+.btn:hover::after {
+  right: 100%;
+  width: 100%;
+  border-bottom: 1px solid #f6e8ea;
+}
+/* --- Animations --- */
+@keyframes containerAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/* --- Animations --- */
+/* ---------- Container ---------- */
